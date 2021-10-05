@@ -1,15 +1,22 @@
-import * as React from "react";
-import ReactDOM from "react-dom";
-import FizzBuzz from "./components/fizzBuzz";
+import React from "react";
+// import "./App.css";
+import Navbar from "./components/NavBar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Contact from "./pages/contact";
+import FizzBuzz from "./pages/fizzBuzz";
 
 function App() {
   return (
-    <div style={{ width: "100%" }}>
-      <FizzBuzz />
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/home" exact component={Home} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/fizzBuzz" component={FizzBuzz} />
+      </Switch>
+    </Router>
   );
 }
-
-ReactDOM.render(<App />, document.querySelector("#root"));
 
 export default App;
