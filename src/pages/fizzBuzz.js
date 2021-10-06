@@ -160,6 +160,11 @@ const Container = styled.section`
   padding: 2vw;
   border-radius: 1vw;
   width: auto;
+
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -195,12 +200,16 @@ const AnswerButton = styled.button`
   width: 120px;
   border-radius: 0.5vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: 600px) {
+    width: 10vw;
+  }
 `;
 
 const Start = styled.button`
   font-size: 1.75vw;
   margin: 3vw;
-  width: 20vw;
+  width: 15vw;
   border-radius: 0.5vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 `;
@@ -209,5 +218,6 @@ const Buttons = styled.section`
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 100vw;
+  text-align: center;
+  width: 75vw;
 `;
