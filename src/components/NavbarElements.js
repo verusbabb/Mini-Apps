@@ -30,7 +30,7 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const Bars = styled(FaBars)`
+export const Bars = styled.div`
   display: none;
   color: #808080;
   @media screen and (max-width: 768px) {

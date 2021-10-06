@@ -69,7 +69,7 @@ export default function FizzBuzz() {
 
   const clickStart = () => {
     generateNumber();
-    startTimer(10);
+    startTimer(20);
     setInstruct(false);
     setShowStart(false);
     setPlaying(true);
@@ -84,7 +84,7 @@ export default function FizzBuzz() {
     setReplayButton(false);
     setCount(0);
     generateNumber();
-    startTimer(10);
+    startTimer(20);
   };
 
   const generateNumber = () => {
@@ -96,14 +96,13 @@ export default function FizzBuzz() {
 
   return (
     <Container>
-      <Title>IT'S JUST SIMPLE MATH...</Title>
+      {!playing && <Title>IT'S JUST SIMPLE MATH...</Title>}
 
       {instruct && (
         <Instruct>
-          You win if you correctly guess whether the displayed number is evenly
-          divisible by 3, 5, or both 3 AND 5. <br />
+          Is a given integer evenly divisible by 3, 5, or 3 AND 5? <br />
           <br />
-          See how many correct guesses you can make in 10 tries.
+          Test your math skills.
         </Instruct>
       )}
 
@@ -136,7 +135,7 @@ export default function FizzBuzz() {
           <AnswerButton onClick={fizzBuzz}>3 and 5?</AnswerButton>
           <AnswerButton onClick={fizz}>Only 3?</AnswerButton>
           <AnswerButton onClick={buzz}>Only 5?</AnswerButton>
-          <AnswerButton onClick={neither}>Neither</AnswerButton>
+          <AnswerButton onClick={neither}>Neither?</AnswerButton>
         </Buttons>
       )}
 
@@ -154,57 +153,55 @@ const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  margin-top: 5em;
-  margin-right: 10em;
-  margin-left: 10em;
+  margin-top: 5vw;
+  margin-right: 10vw;
+  margin-left: 10vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 2em;
-  border-radius: 1em;
+  padding: 2vw;
+  border-radius: 1vw;
+  width: auto;
 `;
 
 const Title = styled.h1`
-  font-size: 2em;
+  font-size: 3vw;
   text-align: center;
 `;
 
 const Instruct = styled.p`
-  font-size: 1.5em;
+  font-size: 3vw;
 `;
 
-const Time = styled.h2``;
+const Time = styled.h1`
+  font-size: 3vw;
+`;
 
 const Question = styled.h1`
-  font-size: 2em;
+  font-size: 3vw;
   color: red;
 `;
 
-const Result = styled.h1`
-  font-size: 1.5em;
+const Result = styled.h2`
+  font-size: 3vw;
   color: red;
 `;
 
-const Score = styled.h2``;
+const Score = styled.h2`
+  font-size: 3vw;
+`;
 
 const AnswerButton = styled.button`
-  font-size: 1.25em;
+  font-size: 1.25vw;
   margin: 10px;
-  width: 100px;
-  border-radius: 0.5em;
+  width: 120px;
+  border-radius: 0.5vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 `;
 
-// const Button = styled.button`
-//   font-size: 1em;
-//   border-color: #e7e7e7;
-//   margin: 10px;
-//   width: 300px;
-// `;
-
 const Start = styled.button`
-  font-size: 1.75em;
-  margin: 10px;
-  width: 200px;
-  border-radius: 0.5em;
+  font-size: 1.75vw;
+  margin: 3vw;
+  width: 20vw;
+  border-radius: 0.5vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 `;
 
@@ -212,6 +209,5 @@ const Buttons = styled.section`
   display: flex;
   justify-content: center;
   align-self: center;
-  text-align: center;
-  width: 800px;
+  width: 100vw;
 `;
