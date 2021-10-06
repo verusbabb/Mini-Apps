@@ -114,7 +114,7 @@ export default function FizzBuzz() {
 
       <Time>
         {timeLeft && <h3>Time Remaining: {time}</h3>}
-        {noTimeLeft && <h2>GameOver!</h2>}
+        {noTimeLeft && <h2>Game Over!</h2>}
         {noTimeLeft && (
           <Result>
             You won {wins} out of {count} tries.
@@ -168,7 +168,7 @@ const Title = styled.h1`
 `;
 
 const Instruct = styled.p`
-  font-size: 3vw;
+  font-size: 2.5vw;
 `;
 
 const Time = styled.h1`
@@ -176,17 +176,17 @@ const Time = styled.h1`
 `;
 
 const Question = styled.h1`
-  font-size: 3vw;
+  font-size: 2.5vw;
   color: red;
 `;
 
 const Result = styled.h2`
-  font-size: 3vw;
+  font-size: 2.5vw;
   color: red;
 `;
 
 const Score = styled.h2`
-  font-size: 3vw;
+  font-size: 2.5vw;
 `;
 
 const AnswerButton = styled.button`
