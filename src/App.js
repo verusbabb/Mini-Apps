@@ -2,9 +2,10 @@ import React from "react";
 // import "./App.css";
 import Navbar from "./components/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/home";
-import Contact from "./pages/contact";
-import FizzBuzz from "./pages/fizzBuzz";
+import Home from "./components/home";
+import Contact from "./components/contact";
+import FizzBuzz from "./components/fizzBuzz";
+import ReverseMe from "./components/reverseMe";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/home" exact component={Home} />
         <Route path="/contact" component={Contact} />
         <Route path="/fizzBuzz" component={FizzBuzz} />
+        <Route path="/reverseMe" component={ReverseMe} />
       </Switch>
     </Router>
   );

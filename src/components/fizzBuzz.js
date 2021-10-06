@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 export default function FizzBuzz() {
@@ -7,11 +7,7 @@ export default function FizzBuzz() {
   const [playing, setPlaying] = useState(false);
   const [timeLeft, setTimeLeft] = useState(false);
   const [noTimeLeft, setNoTimeLeft] = useState(false);
-  const [answer, setAnswer] = useState(false);
-  const [playButton, setPlayButton] = useState(false);
   const [replayButton, setReplayButton] = useState(false);
-  const [answerButtons, setAnswerButtons] = useState(false);
-  const [score, setScore] = useState(false);
   const [randomNum, setRandomNum] = useState();
   const [wins, setWins] = useState(0);
   const [count, setCount] = useState(0);
@@ -91,60 +87,61 @@ export default function FizzBuzz() {
     let number = Math.floor(Math.random() * 100);
     console.log(number);
     setRandomNum(number);
-    // setCount(count + 1);
   };
 
   return (
-    <Container>
-      {!playing && <Title>IT'S JUST SIMPLE MATH...</Title>}
+    <div>
+      <Container>
+        {!playing && <Title>IT'S JUST SIMPLE MATH...</Title>}
 
-      {instruct && (
-        <Instruct>
-          Is a given integer evenly divisible by 3, 5, or 3 AND 5? <br />
-          <br />
-          Test your math skills.
-        </Instruct>
-      )}
-
-      {showStart && (
-        <Buttons>
-          <Start onClick={clickStart}>Play</Start>
-        </Buttons>
-      )}
-
-      <Time>
-        {timeLeft && <h3>Time Remaining: {time}</h3>}
-        {noTimeLeft && <h2>Game Over!</h2>}
-        {noTimeLeft && (
-          <Result>
-            You won {wins} out of {count} tries.
-          </Result>
+        {instruct && (
+          <Instruct>
+            Is a given integer evenly divisible by 3, 5, or 3 AND 5? <br />
+            <br />
+            Test your math skills.
+          </Instruct>
         )}
-      </Time>
 
-      {playing && <Question>Is {randomNum} evenly divisible by...</Question>}
+        {showStart && (
+          <Buttons>
+            <Start onClick={clickStart}>Play</Start>
+          </Buttons>
+        )}
 
-      {replayButton && (
-        <Buttons>
-          <Start onClick={clickStartAgain}>Play Again</Start>
-        </Buttons>
-      )}
+        <Time>
+          {timeLeft && <h3>Time Remaining: {time}</h3>}
+          {noTimeLeft && <h2>Game Over!</h2>}
+          {noTimeLeft && (
+            <Result>
+              You won {wins} out of {count} tries.
+            </Result>
+          )}
+        </Time>
 
-      {playing && (
-        <Buttons>
-          <AnswerButton onClick={fizzBuzz}>3 and 5?</AnswerButton>
-          <AnswerButton onClick={fizz}>Only 3?</AnswerButton>
-          <AnswerButton onClick={buzz}>Only 5?</AnswerButton>
-          <AnswerButton onClick={neither}>Neither?</AnswerButton>
-        </Buttons>
-      )}
+        {playing && <Question>Is {randomNum} evenly divisible by...</Question>}
 
-      {playing && (
-        <Score>
-          Score: {wins} for {count}.
-        </Score>
-      )}
-    </Container>
+        {replayButton && (
+          <Buttons>
+            <Start onClick={clickStartAgain}>Play Again</Start>
+          </Buttons>
+        )}
+
+        {playing && (
+          <Buttons>
+            <AnswerButton onClick={fizzBuzz}>3 and 5?</AnswerButton>
+            <AnswerButton onClick={fizz}>Only 3?</AnswerButton>
+            <AnswerButton onClick={buzz}>Only 5?</AnswerButton>
+            <AnswerButton onClick={neither}>Neither?</AnswerButton>
+          </Buttons>
+        )}
+
+        {playing && (
+          <Score>
+            Score: {wins} for {count}.
+          </Score>
+        )}
+      </Container>
+    </div>
   );
 }
 
