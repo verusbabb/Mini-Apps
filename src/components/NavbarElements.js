@@ -18,14 +18,15 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  font-size: 1.25em;
   cursor: pointer;
   &.active {
     color: #000000;
   }
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #808080;
+    transition: 0.2s ease-in-out;
+    background: #696969;
+    color: #fff;
   }
 `;
 

@@ -19,7 +19,7 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink to="/fizzBuzz" activeStyle>
-            Algos
+            Algo-Fun
           </NavLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
