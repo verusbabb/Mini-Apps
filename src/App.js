@@ -6,6 +6,7 @@ import Home from "./components/home";
 import Contact from "./components/contact";
 import FizzBuzz from "./components/fizzBuzz";
 import ReverseMe from "./components/reverseMe";
+import DaysUntil from "./components/daysUntil";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/fizzBuzz" component={FizzBuzz} />
         <Route path="/reverseMe" component={ReverseMe} />
+        <Route path="/daysUntil" component={DaysUntil} />
       </Switch>
     </Router>
   );

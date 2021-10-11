@@ -51,6 +51,7 @@ const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  background-color: #448aff;
   margin-top: 5vw;
   margin-right: 10vw;
   margin-left: 10vw;
