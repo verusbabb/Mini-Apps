@@ -33,7 +33,7 @@ export default function ReverseMe() {
 
   return (
     <Container>
-      <Title>Reverse Me</Title>
+      <Title>WRITE BACKWARDS</Title>
       <Instruct>Type a phrase and I will reverse it for you...</Instruct>
 
       <form id="inputForm">

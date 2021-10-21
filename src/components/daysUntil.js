@@ -5,17 +5,6 @@ const DaysUntil = () => {
   const [days, setDays] = useState();
 
   let today = new Date();
-  let Christmas = "2021-12-25";
-  let New_Years_Day = "2022-01-01";
-  let MLK = "2022-01-17";
-  let Labor_Day = "2022-09-05";
-  let Independence = "2022-07-04";
-  let Thanksgiving = "2022-11-24";
-  let Memorial = "2022-05-30";
-  let Valentines = "2022-02-14";
-  const Presidents = "2022-02-21";
-  const Easter = "2022-04-17";
-  const GroundHog = "2022-02-02";
 
   const dayDif = (e) => {
     e.preventDefault();
@@ -45,7 +34,7 @@ const DaysUntil = () => {
 
   return (
     <Container>
-      <Title>HOW MANY DAYS UNTIL...</Title>
+      <Title>CALENDAR COUNTDOWN</Title>
       <form onSubmit={customDayDif}>
         <Info>Enter a specific date..</Info>
         <EnterInput

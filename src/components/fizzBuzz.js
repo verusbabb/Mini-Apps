@@ -90,7 +90,7 @@ export default function FizzBuzz() {
   return (
     <div>
       <Container>
-        <Title>IT'S JUST SIMPLE MATH...</Title>
+        <Title>MATH TEST</Title>
 
         {instruct && (
           <Info>
