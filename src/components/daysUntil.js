@@ -36,7 +36,9 @@ const DaysUntil = () => {
     <Container>
       <Title>CALENDAR COUNTDOWN</Title>
       <form onSubmit={customDayDif}>
-        <Info>Enter a specific date..</Info>
+        <Info>
+          Enter a specific date and I'll tell you how many days away it is...
+        </Info>
         <EnterInput
           type="text"
           name="name"
