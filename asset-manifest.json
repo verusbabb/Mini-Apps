@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/fun-with-algos/static/js/main.a2f909e8.chunk.js",
+    "main.js.map": "/fun-with-algos/static/js/main.a2f909e8.chunk.js.map",
+    "runtime-main.js": "/fun-with-algos/static/js/runtime-main.8f01b085.js",
+    "runtime-main.js.map": "/fun-with-algos/static/js/runtime-main.8f01b085.js.map",
+    "static/js/2.f70e8dee.chunk.js": "/fun-with-algos/static/js/2.f70e8dee.chunk.js",
+    "static/js/2.f70e8dee.chunk.js.map": "/fun-with-algos/static/js/2.f70e8dee.chunk.js.map",
+    "index.html": "/fun-with-algos/index.html",
+    "static/js/2.f70e8dee.chunk.js.LICENSE.txt": "/fun-with-algos/static/js/2.f70e8dee.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f01b085.js",
+    "static/js/2.f70e8dee.chunk.js",
+    "static/js/main.a2f909e8.chunk.js"
+  ]
+}
