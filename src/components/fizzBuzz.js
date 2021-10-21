@@ -28,8 +28,6 @@ export default function FizzBuzz() {
         setReplayButton(true);
         setNoTimeLeft(true);
         setTimeLeft(false);
-
-        console.log("Ding!");
       }
     }, 1000);
   }
@@ -92,53 +90,57 @@ export default function FizzBuzz() {
   return (
     <div>
       <Container>
-        {!playing && <Title>IT'S JUST SIMPLE MATH...</Title>}
+        <Title>IT'S JUST SIMPLE MATH...</Title>
 
         {instruct && (
-          <Instruct>
-            Is a given integer evenly divisible by 3, 5, or 3 AND 5? <br />
-            <br />
+          <Info>
             Test your math skills.
-          </Instruct>
+            <br />
+            <br />
+            Is a given integer evenly divisible by 3, 5, or 3 AND 5?
+          </Info>
         )}
 
         {showStart && (
           <Buttons>
-            <Start onClick={clickStart}>Play</Start>
+            <Button onClick={clickStart}>Play</Button>
           </Buttons>
         )}
 
-        <Time>
-          {timeLeft && <h3>Time Remaining: {time}</h3>}
-          {noTimeLeft && <h2>Game Over!</h2>}
-          {noTimeLeft && (
-            <Result>
-              You won {wins} out of {count} tries.
-            </Result>
-          )}
-        </Time>
+        <div>
+          {timeLeft && <Timer>Time Remaining: {time}</Timer>}
+          {noTimeLeft && <InfoRed>Game Over!</InfoRed>}
+        </div>
 
-        {playing && <Question>Is {randomNum} evenly divisible by...</Question>}
+        <div>
+          {noTimeLeft && (
+            <Info>
+              You won {wins} out of {count} tries.
+            </Info>
+          )}
+        </div>
+
+        {playing && <Info>Is {randomNum} evenly divisible by...</Info>}
 
         {replayButton && (
           <Buttons>
-            <Start onClick={clickStartAgain}>Play Again</Start>
+            <Button onClick={clickStartAgain}>Play Again</Button>
           </Buttons>
         )}
 
         {playing && (
           <Buttons>
-            <AnswerButton onClick={fizzBuzz}>3 and 5?</AnswerButton>
-            <AnswerButton onClick={fizz}>Only 3?</AnswerButton>
-            <AnswerButton onClick={buzz}>Only 5?</AnswerButton>
-            <AnswerButton onClick={neither}>Neither?</AnswerButton>
+            <Button onClick={fizzBuzz}>3 and 5?</Button>
+            <Button onClick={fizz}>Only 3?</Button>
+            <Button onClick={buzz}>Only 5?</Button>
+            <Button onClick={neither}>Neither?</Button>
           </Buttons>
         )}
 
         {playing && (
-          <Score>
+          <Info>
             Score: {wins} for {count}.
-          </Score>
+          </Info>
         )}
       </Container>
     </div>
@@ -150,6 +152,7 @@ const Container = styled.section`
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   margin-top: 5vw;
   margin-right: 10vw;
   margin-left: 10vw;
@@ -157,7 +160,6 @@ const Container = styled.section`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 2vw;
   border-radius: 1vw;
-  width: auto;
 
   @media only screen and (max-width: 600px) {
     display: flex;
@@ -167,49 +169,26 @@ const Container = styled.section`
 
 const Title = styled.h1`
   font-size: 3vw;
-  text-align: center;
+  ${"" /* text-align: center; */}
 `;
 
-const Instruct = styled.p`
-  font-size: 2.5vw;
-`;
-
-const Time = styled.h1`
+const Timer = styled.p`
   font-size: 3vw;
-`;
-
-const Question = styled.h1`
-  font-size: 2.5vw;
   color: red;
-`;
-
-const Result = styled.h2`
-  font-size: 2.5vw;
-  color: red;
-`;
-
-const Score = styled.h2`
-  font-size: 2.5vw;
-`;
-
-const AnswerButton = styled.button`
-  font-size: 1.25vw;
-  margin: 10px;
-  width: 120px;
-  border-radius: 0.5vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-
-  @media only screen and (max-width: 600px) {
-    width: 10vw;
+  animation: blinker 1s linear infinite;
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
   }
 `;
 
-const Start = styled.button`
-  font-size: 1.75vw;
-  margin: 3vw;
-  width: 15vw;
-  border-radius: 0.5vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+const Info = styled.p`
+  font-size: 2.5vw;
+`;
+const InfoRed = styled.p`
+  font-size: 3vw;
+  color: red;
 `;
 
 const Buttons = styled.section`
@@ -218,4 +197,16 @@ const Buttons = styled.section`
   align-self: center;
   text-align: center;
   width: 75vw;
+`;
+
+const Button = styled.button`
+  font-size: 1.75vw;
+  margin: 10px;
+  width: 20vw;
+  border-radius: 0.5vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: 600px) {
+    width: 20vw;
+  }
 `;

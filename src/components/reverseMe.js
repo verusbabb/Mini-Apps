@@ -40,8 +40,8 @@ export default function ReverseMe() {
         <Input type="text" name="phrase" onChange={reverseWithSpread} />
       </form>
 
-      <Result>{reverseMe}</Result>
-      <Reset onClick={resetState}>Reset</Reset>
+      <Instruct>{reverseMe}</Instruct>
+      <Button onClick={resetState}>Reset</Button>
     </Container>
   );
 }
@@ -58,7 +58,6 @@ const Container = styled.section`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 2vw;
   border-radius: 1vw;
-  width: auto;
 
   @media only screen and (max-width: 600px) {
     display: flex;
@@ -75,22 +74,25 @@ const Instruct = styled.p`
   font-size: 2.5vw;
 `;
 
-const Result = styled.h2`
-  font-size: 2.5vw;
-  color: red;
-`;
-
 const Input = styled.input`
   width: 30vw;
-
+  padding: 0.5vw;
   align-self: center;
 `;
 
-const Reset = styled.button`
-  font-size: 1.75vw;
-  margin: 3vw;
-  width: 15vw;
+const Button = styled.button`
+  display: flex;
+  text-align: center;
   align-self: center;
+  font-size: 1.75vw;
+  justify-content: center;
+  margin: 10px;
+  width: 15vw;
   border-radius: 0.5vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: 600px) {
+    width: 20vw;
+    margin: 1vw;
+  }
 `;

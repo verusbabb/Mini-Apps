@@ -45,29 +45,33 @@ const DaysUntil = () => {
 
   return (
     <Container>
-      <Title>How many days until...</Title>
+      <Title>HOW MANY DAYS UNTIL...</Title>
       <form onSubmit={customDayDif}>
-        <Label>Enter a specific date..</Label>
-        <input type="text" name="name" placeholder="yyyy-mm-dd" />
-        <button type="submit">enter</button>
+        <Info>Enter a specific date..</Info>
+        <EnterInput
+          type="text"
+          name="name"
+          placeholder="yyyy-mm-dd"
+        ></EnterInput>
+        <EnterButton type="submit">enter</EnterButton>
       </form>
 
-      <Label>Or choose a specific holiday below...</Label>
+      <Info>Or choose a specific holiday below...</Info>
       <Buttons>
-        <AnswerButton onClick={dayDif} value="2021-12-25">
+        <Button onClick={dayDif} value="2021-12-25">
           Christmas
-        </AnswerButton>
-        <AnswerButton onClick={dayDif} value="2022-02-14">
+        </Button>
+        <Button onClick={dayDif} value="2022-02-14">
           Valentine's Day
-        </AnswerButton>
-        <AnswerButton onClick={dayDif} value="2022-05-30">
+        </Button>
+        <Button onClick={dayDif} value="2022-05-30">
           Memorial Day
-        </AnswerButton>
-        <AnswerButton onClick={dayDif} value="2022-07-04">
+        </Button>
+        <Button onClick={dayDif} value="2022-07-04">
           4th of July
-        </AnswerButton>
+        </Button>
       </Buttons>
-      {days && <h2>That is {days} days away!</h2>}
+      {days && <Info>That is {days} days away!</Info>}
     </Container>
   );
 };
@@ -84,7 +88,6 @@ const Container = styled.section`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 2vw;
   border-radius: 1vw;
-  width: auto;
 
   @media only screen and (max-width: 600px) {
     display: flex;
@@ -92,33 +95,37 @@ const Container = styled.section`
   }
 `;
 
-const Label = styled.div`
-  font-size: 2vw;
-  margin-bottom: 10px;
-  margin-top: 25px;
-`;
-
 const Title = styled.h1`
   font-size: 3vw;
   text-align: center;
 `;
 
-const Input = styled.input`
-  width: 30vw;
-
-  align-self: center;
+const Instruct = styled.p`
+  font-size: 2.5vw;
 `;
 
-const AnswerButton = styled.button`
-  font-size: 1.25vw;
-  margin: 10px;
-  width: 120px;
-  border-radius: 0.5vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+const EnterInput = styled.input`
+  width: 10%;
+  align-self: center;
+  text-align: center;
+  padding: 0.5vw;
 
   @media only screen and (max-width: 600px) {
-    width: 10vw;
+    width: 30%;
   }
+`;
+
+const EnterButton = styled.button`
+  align-self: center;
+  padding: 0.5vw;
+
+  @media only screen and (max-width: 600px) {
+    width: 30%;
+  }
+`;
+
+const Info = styled.p`
+  font-size: 2.5vw;
 `;
 
 const Buttons = styled.section`
@@ -126,7 +133,28 @@ const Buttons = styled.section`
   justify-content: center;
   align-self: center;
   text-align: center;
-  width: 75vw;
+  width: 150vw;
+
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 20vw;
+  }
+`;
+
+const Button = styled.button`
+  font-size: 1.75vw;
+  margin: 10px;
+  width: 15vw;
+  border-radius: 0.5vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: 600px) {
+    width: 20vw;
+    margin: 1vw;
+  }
 `;
 
 export default DaysUntil;
