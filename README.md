@@ -1,37 +1,26 @@
-# Getting Started with Create React App
+# Mini-Apps
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created with React, this app contains several components, each of which puts useful code blocks to work in a fun or interesting way.  Some components are based on algorithms, some are based on web API's, and others are just simple games for fun.
 
-## Available Scripts
+https://verusbabb.github.io/Mini-Apps/
 
-In the project directory, you can run:
+![](https://github.com/verusbabb/REACT-SteveBabb-Portfolio/blob/connect/public/assets/portfolio_screenshot.png)
 
-### `yarn start`
+## SUMMARY
+This portfolio is created with REACT and contains samples of sites/apps that I have created and provides insight into my skills and knowledge. Within the portfolio, visitors can find links to demo the different examples of my work along with their respective repository in GitHub, links to connect with me, and bio as well as a link to my full resume. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## INSIDE
+This portfolio was developed using:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- HTML
+- CSS (custom and Materialize)
+- JavaScript/JQuery
+- REACT
 
-### `yarn test`
+## CONNECT WITH ME
+- Email: steve.babb@outlook.com
+- GitHub: https://github.com/verusbabb
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
