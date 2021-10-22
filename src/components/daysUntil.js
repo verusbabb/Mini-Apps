@@ -91,10 +91,6 @@ const Title = styled.h1`
   text-align: center;
 `;
 
-const Instruct = styled.p`
-  font-size: 2.5vw;
-`;
-
 const EnterInput = styled.input`
   width: 10%;
   align-self: center;
