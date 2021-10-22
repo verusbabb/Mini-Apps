@@ -37,7 +37,12 @@ export default function ReverseMe() {
       <Instruct>Type a phrase and I will reverse it for you...</Instruct>
 
       <form id="inputForm">
-        <Input type="text" name="phrase" onChange={reverseWithSpread} />
+        <Input
+          type="text"
+          name="phrase"
+          placeholder="Type anything"
+          onChange={reverseWithSpread}
+        />
       </form>
 
       <Instruct>{reverseMe}</Instruct>
